@@ -1,0 +1,14 @@
+usr/share/grpc/roots.pem
+usr/lib/${DEB_HOST_MULTIARCH}/libgpr.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libgrpc.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libgrpc_unsecure.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libaddress_sorting.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libupb.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libupb_collections_lib.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libupb_json_lib.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libupb_textformat_lib.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libgrpc_plugin_support.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libprotobuf*.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libprotoc.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libre2.so.*
+usr/lib/${DEB_HOST_MULTIARCH}/libutf8_range_lib.so.*

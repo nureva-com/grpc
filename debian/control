@@ -1,0 +1,86 @@
+Source: grpc
+Section: libs
+Priority: optional
+Maintainer: Sean Boyden <seanboyden@nureva.com>
+XSBC-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               libssl-dev,
+               pkg-config,
+               protobuf-compiler     
+Standards-Version: 4.6.2
+Homepage: https://grpc.io
+
+Package: libgrpc-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libabsl-dev (= ${binary:Version}), libgrpc (= ${binary:Version}), ${misc:Depends}
+Description: High performance, open source, general RPC framework - development files
+ gRPC is a modern, open source, high-performance remote procedure call (RPC)
+ framework that can run anywhere.  This package contains the header files and
+ static libraries.
+ .
+ This package contains the headers and the static library for libgrpc.
+
+Package: libabsl20230802t64
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Abseil C++ libraries - runtime
+ Abseil is an open-source collection of C++ libraries drawn from the Google
+ internal code base. This package contains the runtime shared libraries.
+
+Package: libabsl-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libabsl20230802t64 (= ${binary:Version}), ${misc:Depends}
+Description: Abseil C++ libraries - development files
+ Abseil is an open-source collection of C++ libraries drawn from the Google
+ internal code base. This package contains headers and development metadata
+ matching the runtime libraries.
+
+Package: libgrpc
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: High performance, open source, general RPC framework - runtime
+ gRPC is a modern, open source, high-performance remote procedure call (RPC)
+ framework that can run anywhere.  This package contains the shared libraries.
+ .
+ This package provides the gRPC C bindings.
+
+Package: libgrpc++
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: high performance general RPC framework
+ A modern, open source remote procedure call (RPC) framework that can
+ run anywhere. It enables client and server applications to communicate
+ transparently, and makes it easier to build connected systems.
+ .
+ This package provides the gRPC C++ bindings.
+
+Package: protobuf-compiler-grpc
+Section: devel
+Architecture: any
+Depends: libgrpc (= ${binary:Version}), protobuf-compiler, ${shlibs:Depends}, ${misc:Depends}
+Description: high performance general RPC framework - protocol compiler plugin
+ The gRPC protocol compiler plugin generates code for gRPC services from
+ Protocol Buffers definitions.
+
+Package: libgrpc++-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libgrpc++ (= ${binary:Version}), libgrpc-dev (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: high performance general RPC framework (development)
+ A modern, open source remote procedure call (RPC) framework that can
+ run anywhere. It enables client and server applications to communicate
+ transparently, and makes it easier to build connected systems.
+ .
+ This package contains the headers and the static library for libgrpc++.

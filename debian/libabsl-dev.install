@@ -1,0 +1,5 @@
+usr/include/absl/
+usr/lib/${DEB_HOST_MULTIARCH}/libabsl_*.a
+usr/lib/${DEB_HOST_MULTIARCH}/libabsl_*.so
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/absl/
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/absl_*.pc

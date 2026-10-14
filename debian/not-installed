@@ -1,0 +1,17 @@
+usr/include/absl/*
+usr/include/google/protobuf/*
+usr/share/pkgconfig/*
+usr/lib/*
+usr/share/man/*
+
+usr/bin/*
+
+usr/include/ares*
+usr/include/grpc++*
+usr/include/grpcpp*
+usr/include/re2*
+usr/include/utf*
+usr/include/zconf.h
+usr/include/zlib.h
+
+usr/share/grpc/roots.pem

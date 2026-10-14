@@ -1,0 +1,12 @@
+grpc (1:1.59.3-nureva2) noble; urgency=medium
+
+  * Package the bundled Abseil runtime and development files separately.
+
+ -- Sean Boyden <seanboyden@nureva.com>  Thu, 08 Oct 2026 13:38:31 -0600
+
+grpc (1.59.3-nureva1) noble; urgency=medium
+
+  * Custom build of gRPC version 1.59.3 for Ubuntu
+
+ -- Sean Boyden <seanboyden@nureva.com>  Mon, 28 Sep 2026 14:05:21 -0600
+
