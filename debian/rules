@@ -4,6 +4,8 @@ export DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 BUILD_STATIC_DIR=$(CURDIR)/build-static/
 BUILD_SHARED_DIR=$(CURDIR)/build-shared/
+HOST_TOOLS_DIR=$(CURDIR)/build-host/
+
 SOURCE_VERSION=$(shell dpkg-parsechangelog -S Version)
 
 %:
@@ -25,9 +27,9 @@ COMMON_BUILD_FLAGS= \
         -DgRPC_INSTALL_LIBDIR=lib/$(DEB_HOST_MULTIARCH) \
         -DgRPC_INSTALL_CMAKEDIR=lib/$(DEB_HOST_MULTIARCH)/cmake/grpc \
 		-DgRPC_INSTALL_PKGCONFIG_DIR=lib/$(DEB_HOST_MULTIARCH)/pkgconfig \
-        -DProtobuf_PROTOC_EXECUTABLE=/home/seanboyden/grpc-1.59.3/build-host/protoc \
-		-D_gRPC_PROTOBUF_PROTOC_EXECUTABLE=/home/seanboyden/grpc-1.59.3/build-host/protoc \
-        -D_gRPC_CPP_PLUGIN=/home/seanboyden/grpc-1.59.3/build-host/grpc_cpp_plugin
+        -DProtobuf_PROTOC_EXECUTABLE=$(HOST_TOOLS_DIR)/protoc \
+		-D_gRPC_PROTOBUF_PROTOC_EXECUTABLE=$(HOST_TOOLS_DIR)/protoc \
+        -D_gRPC_CPP_PLUGIN=$(HOST_TOOLS_DIR)/grpc_cpp_plugin
 
 override_dh_auto_clean:
 	$(RM) -r $(BUILD_STATIC_DIR)
